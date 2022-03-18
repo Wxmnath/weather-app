@@ -4,16 +4,12 @@ exports[`ForecastSummary renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="forecast-summary"
+    data-testid="forecast-summary"
   >
     <div
       class="forecast-summary__date"
     >
       1111111
-    </div>
-    <div
-      class="forecast-summary__description"
-    >
-      Stub description
     </div>
     <div
       class="forecast-summary__icon"
@@ -25,6 +21,11 @@ exports[`ForecastSummary renders correctly 1`] = `
       class="forecast-summary__temperature"
     >
       22°C
+    </div>
+    <div
+      class="forecast-summary__description"
+    >
+      Stub description
     </div>
   </div>
 </DocumentFragment>

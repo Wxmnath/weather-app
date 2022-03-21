@@ -16,7 +16,7 @@ exports[`ForecastSummary renders correctly 1`] = `
       data-testid="forecast-icon"
     >
       <i
-        class="wi wi-day-storm-showers"
+        class="wi wi-day-sunny"
         name="owm"
       />
     </div>

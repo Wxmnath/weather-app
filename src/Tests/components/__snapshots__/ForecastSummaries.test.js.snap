@@ -19,7 +19,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-storm-showers"
+          class="wi wi-day-sunny"
           name="owm"
         />
       </div>
@@ -48,7 +48,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-sprinkle"
+          class="wi wi-day-snow"
           name="owm"
         />
       </div>

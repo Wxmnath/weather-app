@@ -16,10 +16,20 @@ function App(props) {
     (forecast) => forecast.date === selectedDate
   );
   // Now the <ForecastDetails /> component can render whichever forecast matches our selected date. If that date changes, then the forecast rendered in <ForecastDetails /> will also change, but you might see an error in the command line (where you run npm start) or in the browser:
+  // Let's start by adding the handler function. Add the following code to your <App /> component:
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
+  // This is pretty simple - the function gets passed a date, and we use the setSelectedDate() method from our selectedDate hook to set that date on our state object.
+
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        onForecastSelect={handleForecastSelect}
+        // onForcastSelect={handleForecastSelect} //handleForecastSelect() method passed into <ForecastSummaries /> as a prop called onForecastSelect. Add this prop to your PropTypes in <ForecastSummaries />
+      />
       <ForecastDetails forecast={selectedForecast} />
     </div>
   );

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastSummary renders correctly 1`] = `
+exports[`ForecastDetails renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="forecast-details"
@@ -12,27 +12,27 @@ exports[`ForecastSummary renders correctly 1`] = `
       Thu 1st Jan
     </div>
     <div
-      class="forecast-summary__max-temperature"
+      class="forecast-details__max-temperature"
     >
-      22°C
+      Max:22°C
     </div>
     <div
-      class="forecast-summary__min-temperature"
+      class="forecast-details__min-temperature"
     >
-      12°C
+      Min:12°C
     </div>
     <div
       class="forecast-details__humidity"
     >
-      80 
+      Humidity:80% 
     </div>
     <div
-      class="forecast-summary__wind"
+      class="forecast-details__speed-wind"
     >
-      13
+      13mph
     </div>
     <div
-      class="forecast-summary__direction"
+      class="forecast-details__direction-wind"
     >
       NW
     </div>

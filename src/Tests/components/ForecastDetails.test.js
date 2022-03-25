@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastDetails from "../../Components/ForecastDetails";
 
-describe("ForecastSummary", () => {
+describe("ForecastDetails", () => {
   const validProps = {
     date: 1111111,
     temperature: {
@@ -17,14 +17,7 @@ describe("ForecastSummary", () => {
   };
 
   it("renders correctly", () => {
-    const { asFragment } = render(
-      <ForecastDetails
-        date={validProps.date}
-        temperature={validProps.temperature}
-        humidity={validProps.humidity}
-        wind={validProps.wind}
-      />
-    );
+    const { asFragment } = render(<ForecastDetails forecast={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

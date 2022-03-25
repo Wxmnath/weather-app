@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
@@ -7,11 +7,20 @@ import "../Styles/App.css";
 
 function App(props) {
   const { forecasts, location } = props;
+  // Add a useState() hook to your <App /> component with its return value destructured to selectedDate and setSelectedDate. Set the initial value of useState() to the date of the first forecast within forecasts array.
+  // We first need to add a useState() hook before we can add our state. We have to set the selectedDate property in state to the date of the first forecast from forecasts:
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  // Create a selectedForecast variable and set it equal to the date within your forecasts that matches the selectedDate, and pass this selectedForecast variable into the <ForecastDetails /> component.
+  // Then we want to pass a forecast into <ForecastDetails /> based on the selected date:
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+  // Now the <ForecastDetails /> component can render whichever forecast matches our selected date. If that date changes, then the forecast rendered in <ForecastDetails /> will also change, but you might see an error in the command line (where you run npm start) or in the browser:
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries forecasts={forecasts} />
-      <ForecastDetails forecast={forecasts[0]} />
+      <ForecastDetails forecast={selectedForecast} />
     </div>
   );
 }

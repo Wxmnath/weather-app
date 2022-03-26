@@ -5,11 +5,11 @@ import ForecastDetails from "./ForecastDetails";
 import getForecast from "./getForecast";
 import "../Styles/App.css";
 
-const App = () => {
+function App() {
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({ city: "", country: "" });
   const [selectedDate, setSelectedDate] = useState(0);
-
+  console.log(forecasts);
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
@@ -19,7 +19,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    getForecast(setForecasts, setLocation, setLocation);
+    getForecast(setSelectedDate, setForecasts, setLocation);
   }, []);
 
   return (
@@ -32,6 +32,6 @@ const App = () => {
       {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
     </div>
   );
-};
+}
 
 export default App;

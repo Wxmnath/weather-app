@@ -9,7 +9,7 @@ function App() {
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({ city: "", country: "" });
   const [selectedDate, setSelectedDate] = useState(0);
-  console.log(forecasts);
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );

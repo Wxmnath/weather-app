@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import Searchform from "../../Components/SerchForm";
+import Searchform from "../../Components/SearchForm";
 
 describe("SearchForm", () => {
   const validProps = {

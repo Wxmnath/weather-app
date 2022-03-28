@@ -14,7 +14,7 @@ const getForecast = (
     endpoint += `?city=${searchText}`;
   }
 
-  return axios
+  axios
     .get(endpoint)
     .then((response) => {
       setSelectedDate(response.data.forecasts[0].date);

@@ -18,11 +18,11 @@ function App() {
 
   const handleCitySearch = () => {
     getForecast(
-      setErrorMessage,
       searchText,
       setSelectedDate,
       setForecasts,
-      setLocation
+      setLocation,
+      setErrorMessage
     );
   };
 
@@ -30,11 +30,11 @@ function App() {
 
   useEffect(() => {
     getForecast(
-      setErrorMessage,
       searchText,
       setSelectedDate,
       setForecasts,
-      setLocation
+      setLocation,
+      setErrorMessage
     );
   }, [searchText]);
 
@@ -51,6 +51,7 @@ function App() {
         setSearchText={setSearchText}
         onSubmit={handleCitySearch}
       />
+      {errorMessage && <p>error:{errorMessage}</p>}
       {!errorMessage && (
         <>
           <ForecastSummaries

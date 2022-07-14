@@ -51,9 +51,13 @@ function App() {
         setSearchText={setSearchText}
         onSubmit={handleCitySearch}
       />
+
       {errorMessage && <p>error:{errorMessage}</p>}
       {!errorMessage && (
         <>
+          <div className="five-day-forecast">
+            <h1>5 Day Weather Forecast</h1>
+          </div>
           <ForecastSummaries
             forecasts={forecasts}
             onForecastSelect={handleForecastSelect}

@@ -1,4 +1,10 @@
 .forecast-summaries {
   display: flex;
   justify-content: space-between;
+  border-radius: 5px 20px 5px;
+  border: solid black;
+  padding: 8px 15px 8px 15px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: lightgray;
 }

@@ -1,0 +1,22 @@
+.forecast-summary {
+  line-height: 1.2;
+}
+
+.forecast-summary__date {
+  font-weight: bold;
+}
+
+.forecast-summary__icon {
+  margin-top: 10px;
+}
+
+.button__details {
+  margin-top: 10px;
+  background-color: whitesmoke;
+  border: solid black;
+  border-radius: 12px;
+}
+
+.button__details:hover {
+  background-color: lightblue;
+}
